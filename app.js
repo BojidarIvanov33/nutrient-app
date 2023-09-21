@@ -5,18 +5,18 @@ const Food = require("./foodModel");
 const fs = require("fs");
 const notifier = require("node-notifier");
 require("dotenv").config({ path: "./config.env" });
-// String
+const compression = require("compression");
 
-//---------------------------------Body parser
 const bodyParser = require("body-parser");
 // app.use(bodyParser.urlencoded({ extended: false }));
-//----------^^^^^^^^^^^^^^^^^^^^^^^^^-------------
+
 const app = express();
 //Loading tamplates
 const tempOverview = fs.readFileSync(`${__dirname}/templates/template-overview.html`, "utf-8");
 const tempProduct = fs.readFileSync(`${__dirname}/templates/template-product.html`, "utf-8");
 const tempCard = fs.readFileSync(`${__dirname}/templates/template-card.html`, "utf-8");
 // app.use(express.json());
+app.use(compression());
 app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/templates/template-start.html");
