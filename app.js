@@ -22,15 +22,22 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/templates/template-start.html");
 });
 app.get("/api/foods", async (req, res) => {
-  let foodArr = await Food.find();
-  if (req.query.group) {
-    foodArr = await Food.find({ group: req.query.group }).sort(req.query.sort);
-  } else if (!req.query.group && req.query.sort) {
-    foodArr = await Food.find().sort(req.query.sort);
+  try {
+    let foodArr = await Food.find();
+    if (req.query.group) {
+      foodArr = await Food.find({ group: req.query.group }).sort(req.query.sort);
+    } else if (!req.query.group && req.query.sort) {
+      foodArr = await Food.find().sort(req.query.sort);
+    }
+    const cardsHtml = foodArr.map((el) => replaceTemplate(tempCard, el)).join("");
+    const output = tempOverview.replace(/@ProductCard/, cardsHtml);
+    res.end(output);
+  } catch (err) {
+    res.json({
+      status: "cannot load",
+      message: err,
+    });
   }
-  const cardsHtml = foodArr.map((el) => replaceTemplate(tempCard, el)).join("");
-  const output = tempOverview.replace(/@ProductCard/, cardsHtml);
-  res.end(output);
 });
 app.get("/api/new-food", (req, res) => {
   res.sendFile(__dirname + "/templates/template-add-new.html");
