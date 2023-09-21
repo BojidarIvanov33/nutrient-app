@@ -2,51 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- <meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" /> -->
     <link href="/style.css" rel="stylesheet" type="text/css" />
 
     <title>Nutrition App</title>
   </head>
 
   <body>
-    <nav class="navbar">
-      <button class="btn--nav home" type="submit">Home</button>
+    <div class="content--body">
+      <nav class="navbar">
+        <button class="btn--nav home" type="submit">Home</button>
 
-      <button class="btn--nav newFood" type="submit">Add new</button>
-      <button class="btn--nav all" type="submit">All groups</button>
-      <button class="btn--nav nuts" type="submit">Nuts</button>
-      <button class="btn--nav pastry" type="submit">Pastry</button>
-      <button class="btn--nav fruit" type="submit">Fruits</button>
-      <button class="btn--nav vegetable" type="submit">Vegetable</button>
-      <button class="btn--nav mushroom" type="submit">Mushroom</button>
-      <button class="btn--nav chiken" type="submit">Chiken</button>
-      <button class="btn--nav pork" type="submit">Pork</button>
-      <button class="btn--nav beef" type="submit">Beef</button>
-      <button class="btn--nav milk" type="submit">Milk products</button>
-      <button class="btn--nav sea" type="submit">Sea food</button>
-      <button class="btn--nav alchohole" type="submit">Alchohol</button>
-      <button class="btn--nav juice" type="submit">Juice/Cream</button>
-    </nav>
-    <div class="container">
-      <h1>Research your meal</h1>
-      <div class="sort">
-        <select name="sort" id="sortBy">
-          <option value="">Sort by criteria...</option>
-          <option value="protein">Sort by protein</option>
-          <option value="carbohydrates">Sort by carbohydrates</option>
-          <option value="sugar">Sort by sugar</option>
-          <option value="fat">Sort by fat</option>
-          <option value="energy">Sort by energy</option>
-        </select>
+        <button class="btn--nav newFood" type="submit">Add new</button>
+        <button class="btn--nav all" type="submit">All groups</button>
+        <button class="btn--nav nuts" type="submit">Nuts</button>
+        <button class="btn--nav pastry" type="submit">Pastry</button>
+        <button class="btn--nav fruit" type="submit">Fruits</button>
+        <button class="btn--nav vegetable" type="submit">Vegetable</button>
+        <button class="btn--nav mushroom" type="submit">Mushroom</button>
+        <button class="btn--nav chiken" type="submit">Chiken</button>
+        <button class="btn--nav pork" type="submit">Pork</button>
+        <button class="btn--nav beef" type="submit">Beef</button>
+        <button class="btn--nav milk" type="submit">Milk products</button>
+        <button class="btn--nav sea" type="submit">Sea food</button>
+        <button class="btn--nav alchohole" type="submit">Alchohol</button>
+        <button class="btn--nav juice" type="submit">Juice/Cream</button>
+      </nav>
+      <div class="container">
+        <h1>Research your meal</h1>
+        <div class="sort">
+          <select name="sort" id="sortBy">
+            <option value="">Sort by criteria...</option>
+            <option value="protein">Sort by protein</option>
+            <option value="carbohydrates">Sort by carbohydrates</option>
+            <option value="sugar">Sort by sugar</option>
+            <option value="fat">Sort by fat</option>
+            <option value="energy">Sort by energy</option>
+          </select>
 
-        <form action="/api/foods/product" method="post">
-          <input class="search--box" type="search" name="product_name" id="" placeholder="search for food ....." />
-          <button class="btn--submit" type="submit">Search</button>
-        </form>
+          <form action="/api/foods/product" method="post">
+            <input class="search--box" type="search" name="product_name" id="" placeholder="search for food ....." />
+            <button class="btn--submit" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="cards-container">@ProductCard</div>
       </div>
-      <div class="cards-container">@ProductCard</div>
     </div>
     <script>
       const sortBy = document.querySelector("#sortBy");

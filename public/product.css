@@ -272,3 +272,12 @@ h1::before {
 .not-organic {
   display: none;
 }
+@media (max-width: 27em) {
+  html {
+    font-size: 35%;
+  }
+  .container {
+    width: 65rem;
+    margin: 0;
+  }
+}

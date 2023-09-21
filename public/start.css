@@ -109,54 +109,116 @@ h1 {
   html {
     font-size: 55%;
   }
+  .btn--submit {
+    height: 9rem;
+  }
 }
 @media (max-width: 60em) {
   html {
     font-size: 45%;
+  }
+  .btn--submit {
+    height: 9rem;
   }
 }
 @media (max-width: 55em) {
   html {
     font-size: 40%;
   }
+  .btn--submit {
+    height: 10rem;
+  }
 }
 @media (max-width: 50em) {
   html {
     font-size: 37%;
+  }
+  .btn--submit {
+    height: 10rem;
   }
 }
 @media (max-width: 45em) {
   html {
     font-size: 35%;
   }
-}
-@media (max-width: 40em) {
-  html {
-    font-size: 32%;
+  .btn--submit {
+    height: 12rem;
+  }
+  .desc {
+    font-size: 4.5rem;
+  }
+
+  .flexy {
+    height: 35rem;
+    padding: 5rem;
   }
 }
+
 @media (max-width: 37em) {
   html {
     font-size: 30%;
   }
-}
-@media (max-width: 35em) {
-  html {
-    font-size: 28%;
+  .btn--submit {
+    height: 12rem;
+  }
+
+  .flexy {
+    height: 35rem;
+    padding: 5rem;
   }
 }
+
 @media (max-width: 32em) {
   html {
     font-size: 26%;
+  }
+  .btn--submit {
+    height: 12rem;
+  }
+  .desc {
+    font-size: 4.5rem;
+  }
+
+  .flexy {
+    height: 35rem;
+    padding: 5rem;
   }
 }
 @media (max-width: 30em) {
   html {
     font-size: 24%;
   }
+  .btn--submit {
+    width: 50rem;
+    height: 12rem;
+  }
+  .desc {
+    font-size: 5.8rem;
+  }
+  h1 {
+    font-size: 7rem;
+  }
+  .flexy {
+    height: 35rem;
+    padding: 5rem;
+  }
 }
 @media (max-width: 27em) {
   html {
     font-size: 22%;
+  }
+  .btn--submit {
+    width: 50rem;
+    height: 12rem;
+  }
+  .desc {
+    font-size: 5.8rem;
+  }
+  h1 {
+    font-size: 7rem;
+  }
+  .flexy {
+    height: 35rem;
+    padding: 5rem;
   }
 }
