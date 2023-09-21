@@ -21,6 +21,9 @@
     "popup-media": "^4.0.1",
     "yarn": "^1.22.19"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "devDependencies": {
     "popups": "^1.1.3"
   }
