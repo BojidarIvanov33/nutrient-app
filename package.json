@@ -2,7 +2,7 @@
   "name": "healty-app",
   "version": "1.0.0",
   "description": "app for food ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
