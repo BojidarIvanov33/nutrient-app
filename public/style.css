@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem 5rem 10rem;
+  line-height: 1.7;
+  font-family: "Nunito Sans", sans-serif;
+  color: #555;
+  min-height: 100vh;
+  background: #c2e59c no-repeat center center fixed;
+  background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c) no-repeat center center fixed;
+  background: linear-gradient(to right, #64b3f4, #c2e59c) no-repeat center center fixed;
+  background-size: cover;
+}
+.search--box {
+  display: inline-block;
+  border: none;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+.btn--submit {
+  display: inline-block;
+
+  width: 5.5rem;
+  height: 4rem;
+  background-color: #92a4f542;
+  border-radius: 10px;
+}
+
+.btn--nav {
+  width: 100%;
+  height: 5rem;
+  background-color: #215da15d;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  color: whitesmoke;
+  font-size: 2rem;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  min-width: 98rem;
+  background-color: rgba(139, 161, 231, 0.523);
+  width: 100%;
+  justify-content: space-between;
+  gap: 0.2rem;
+
+  /* padding: 1rem; */
+}
+.home {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #3877bfb6;
+}
+.newFood {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: #2770c4be;
+}
+.all {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  background-color: #2770c4be;
+}
+.btn--nav:active,
+.btn--nav:hover {
+  background-color: #47779c94;
+}
+.clicked {
+  background-color: #00e3ae;
+}
+.btn--submit:active,
+.btn--submit:hover {
+  background-color: #f1f8eb94;
+}
+.sort {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-direction: column-reverse;
+  align-content: center;
+  align-items: center;
+}
+.sort select {
+  border-radius: 2rem;
+  height: 3rem;
+}
+h1 {
+  font-family: "Megrim", sans-serif;
+  font-size: 4rem;
+  color: white;
+  transform: skewY(-4deg);
+  text-align: center;
+  position: relative;
+  word-spacing: 3px;
+}
+.container {
+  width: 95rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cards-container {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  gap: 5rem;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 2rem 6rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 5rem;
+  transform: skewX(-20deg);
+  transition: all 0.5s;
+}
+
+.card__emoji {
+  padding: 0.5rem 4rem 0.5rem 0.5rem;
+  transform: skewX(20deg);
+}
+
+.card__title-box {
+  background-image: linear-gradient(to right, #1cd8d2 0%, #93edc7 51%, #1cd8d2 100%);
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.card__title {
+  font-family: sans-serif;
+  color: white;
+  font-size: 3.25rem;
+  transform: skewX(20deg);
+}
+
+.card__details {
+  display: flex;
+}
+
+.card__detail-box {
+  align-self: stretch;
+  border-right: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.card__detail-box:last-child {
+  border: none;
+}
+
+.card__detail {
+  font-weight: 400;
+  font-size: 1.3rem;
+  transform: skewX(20deg);
+  padding: 1.75rem;
+}
+
+.card__detail--organic {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  background-image: linear-gradient(to right, #9be15d, #00e3ae);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card__link:link,
+.card__link:visited {
+  flex: 0 0 auto;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  background-image: linear-gradient(to right, #1cd8d2 0%, #93edc7 51%, #1cd8d2 100%);
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 10px #eee;
+  display: block;
+}
+
+.card__link:hover,
+.card__link:active {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__link span {
+  transform: skewX(20deg);
+}
+
+.card:hover {
+  transform: skewX(-20deg) scale(1.08);
+  box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.emoji-left {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.emoji-right {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.hidden {
+  display: none;
+}

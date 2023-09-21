@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" />
+    <link href="start.css" rel="stylesheet" type="text/css" />
+
+    <title>Food Content</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Application For Food Content</h1>
+      <h3 class="desc">To see datebase and research 'what actually you eat', click the button below to go to the app</h3>
+      <form action="/api/foods" method="get">
+        <button class="btn--submit" type="submit">Research</button>
+      </form>
+    </div>
+    <div class="forkify flexy">
+      <img src="forkify.JPG" class="app_img" alt="Forkify app" />
+
+      <h3 class="desc--other">Forkify App: Application for food recipies</h3>
+    </div>
+    <div class="omnifood flexy">
+      <h3 class="desc--other">Omnifood App: Application for food delivery</h3>
+      <img src="omnifood.JPG" class="app_img" alt="Omnifood app" />
+    </div>
+    <script>
+      const omnifood = document.querySelector(".omnifood");
+      const forkify = document.querySelector(".forkify");
+      let url_forkify = location.href;
+      omnifood.addEventListener("click", () => {
+        window.open("https://food-delivery-b3.netlify.app/");
+      });
+
+      forkify.addEventListener("click", () => {
+        window.open((url_forkify += "forkify"));
+      });
+    </script>
+  </body>
+</html>

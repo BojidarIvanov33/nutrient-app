@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: bisque;
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        margin-top: 10rem;
+        background-color: rgba(191, 174, 153, 0.856);
+        padding: 1rem;
+        border-radius: 2rem;
+      }
+      input {
+        margin-top: 1rem;
+      }
+      select {
+        margin-top: 1rem;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 2rem;
+        width: 25.5rem;
+        height: 4rem;
+        background-color: #d0efb65f;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="submitted" action="/api/foods/new-product" method="post">
+      <label for="name">Add a name :</label>
+      <input id="name" name="name" type="text" value="" required placeholder=" name" /><br />
+      <label for="group">Chose a group</label>
+      <select name="group" id="group">
+        <option value="nuts">nuts</option>
+        <option value="pastry">pastry</option>
+        <option value="fruit">fruit</option>
+        <option value="vegetable">vegetable</option>
+        <option value="mushroom">mushroom</option>
+        <option value="pork">pork meat</option>
+        <option value="chiken">chiken meat</option>
+        <option value="sea">sea food</option>
+        <option value="alchohole">alchohol</option>
+        <option value="juice">juice/cream</option>
+        <option value="milk">milk product</option>
+        <option value="beef">beef meat</option></select
+      ><br />
+      <label for="protein">Protein content is:</label>
+      <input id="protein" name="protein" type="number" value="" required placeholder=" g protein" /><br />
+      <label for="carb">Carbohydrates content is:</label>
+      <input id="carb" name="carbohydrate" type="number" value="" required placeholder=" g carbohydrates" /><br />
+      <label for="carb">Sugar content is:</label>
+      <input id="sugar" name="sugar" type="number" value="" required placeholder=" g sugar" /><br />
+      <label for="fat">Fat content is:</label>
+      <input id="fat" name="fat" type="number" value="" required placeholder=" g fat" /><br />
+      <label for="energy">Energy on 100g is :</label>
+      <input id="energy" name="energy" type="number" value="" required placeholder="kcal energy" /><br />
+
+      <button class="btn" type="submit">submit</button>
+    </form>
+    <script>
+      (function () {
+        let inputPass = prompt("Enter password:");
+
+        while (inputPass !== "101112131415") {
+          if (inputPass === null) return (location.href = "/api/foods");
+          //   alert("Wrong password");
+          inputPass = window.prompt("Wrong password! Try again :");
+        }
+        alert("Nice! Now you can add new food :)");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Nunito+Sans:400,900" rel="stylesheet" />
+    <title>@ProductName @Image /// NODE FARM</title>
+
+    <link rel="stylesheet" href="/product.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <figure class="product">
+        <a href="/api/foods" class="product__back"> <span class="emoji-left">👈</span>All Groups </a>
+        <a href="#" class="product__remove"> <span class="emoji-left">❌</span>Remove</a>
+
+        <div class="product__hero">
+          <img src="" class="product_image" alt="group image" />
+        </div>
+        <h2 class="product__name">@ProductName</h2>
+        <div class="product__details">
+          <p><span class="emoji-left">Group:</span> @group</p>
+          <p><span class="emoji-left">Calories:</span> @calories kcal</p>
+          <p><span class="emoji-left">Protein:</span> @protein g</p>
+          <p><span class="emoji-left">Carbohydrates:</span>@carbohydrate g</p>
+          <p><span class="emoji-left">Sugar:</span> @sugar g</p>
+          <p><span class="emoji-left">Fat:</span> @fat g</p>
+        </div>
+
+        <a href="" class="product__link">
+          <span class="emoji-left">👨‍🍳</span>
+          <span>Recipes with @ProductName</span>
+        </a>
+      </figure>
+    </div>
+    <script>
+      const remove = document.querySelector(".product__remove");
+      const recipeWith = document.querySelector(".product__link");
+      remove.addEventListener("click", () => {
+        let inputPass = prompt("Enter password:");
+        if (inputPass === null) {
+          alert("If you want to remove item, you need a password!");
+          remove.href = "/api/foods";
+        }
+        if (inputPass !== null) {
+          remove.href = `/api/foods/${inputPass},@Id`;
+        }
+      });
+
+      (function () {
+        const image = document.querySelector(".product_image");
+        if ("@group" === "NUTS") {
+          image.src = "/img/nuts.jpg";
+        }
+        if ("@group" === "FRUIT") {
+          image.src = "/img/fruit.jpg";
+        }
+        if ("@group" === "VEGETABLE") {
+          image.src = "/img/vegetable.jpg";
+        }
+        if ("@group" === "PORK") {
+          image.src = "/img/pork.jpg";
+        }
+        if ("@group" === "CHIKEN") {
+          image.src = "/img/chiken.jpg";
+        }
+        if ("@group" === "SEA") {
+          image.src = "/img/sea.jpg";
+        }
+        if ("@group" === "MUSHROOM") {
+          image.src = "/img/mushroom.jpg";
+        }
+        if ("@group" === "BEEF") {
+          image.src = "/img/beef.jpg";
+        }
+        if ("@group" === "PASTRY") {
+          image.src = "/img/pastry.jpg";
+        }
+        if ("@group" === "ALCHOHOLE") {
+          image.src = "/img/alchohol.jpg";
+        }
+        if ("@group" === "JUICE") {
+          image.src = "/img/juice.jpg";
+        }
+        if ("@group" === "MILK") {
+          image.src = "/img/milk.jpg";
+        }
+      })();
+      recipeWith.addEventListener("click", () => {
+        window.open("https://www.google.com/search?q=recipe+with+@ProductName");
+      });
+    </script>
+  </body>
+</html>
