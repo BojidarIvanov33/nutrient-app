@@ -32,6 +32,11 @@
         background-color: #d0efb65f;
         border-radius: 10px;
       }
+      @media (max-width: 27em) {
+        html {
+          font-size: 58%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -72,7 +77,6 @@
 
         while (inputPass !== "101112131415") {
           if (inputPass === null) return (location.href = "/api/foods");
-          //   alert("Wrong password");
           inputPass = window.prompt("Wrong password! Try again :");
         }
         alert("Nice! Now you can add new food :)");

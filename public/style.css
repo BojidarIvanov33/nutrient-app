@@ -54,31 +54,28 @@ body {
   color: whitesmoke;
   font-size: 2rem;
 }
-.navbar {
+.menu-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1rem solid rgba(165, 154, 200, 0.568);
+  /* margin-bottom: 4rem; */
+}
+.cont-nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  /* min-width: 98rem; */
   background-color: rgba(139, 161, 231, 0.523);
-  /* width: 100%; */
   justify-content: space-between;
   gap: 0.2rem;
-
-  /* padding: 1rem; */
 }
+
 .home {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: #3877bfb6;
+  background-color: #815fa4b6;
 }
 .newFood {
-  grid-column-start: 3;
-  grid-column-end: 5;
-  background-color: #2770c4be;
+  background-color: #9d5fa4b6;
 }
 .all {
-  grid-column-start: 5;
-  grid-column-end: 7;
-  background-color: #2770c4be;
+  background-color: #815fa4b6;
 }
 .btn--nav:active,
 .btn--nav:hover {
@@ -125,10 +122,10 @@ h1 {
 }
 
 .cards-container {
-  margin-top: 8rem;
+  margin-top: 6rem;
   display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
-  gap: 5rem;
+  grid-template-columns: 30rem 30rem 30rem 30rem;
+  gap: 3rem;
 }
 
 .card {
@@ -237,20 +234,23 @@ h1 {
   font-size: 2rem;
   margin-left: 1rem;
 }
-@media (max-width: 70em) {
+@media (max-width: 74em) {
   html {
     font-size: 70%;
   }
   .cards-container {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: 28rem 30rem 28rem;
+    grid-template-columns: 28rem 28rem 28rem;
     gap: 1rem;
   }
 }
 @media (max-width: 60em) {
   html {
     font-size: 58%;
+  }
+  .cont-nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .cards-container {
     margin-top: 4rem;
@@ -263,27 +263,15 @@ h1 {
   html {
     font-size: 40%;
   }
+  .cont-nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   .cards-container {
     margin-top: 6rem;
     grid-template-columns: 40rem 40rem;
     gap: 1rem;
   }
-  .navbar {
-    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0.2rem; */
-  }
-  .home {
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
-  }
-  .newFood {
-    /* grid-column-start: 3;
-    grid-column-end: 5; */
-  }
-  .all {
-    /* grid-column-start: 5;
-    grid-column-end: 7; */
-  }
+
   .btn--submit {
     width: 9rem;
   }
@@ -292,7 +280,9 @@ h1 {
 @media (max-width: 27em) {
   html {
     font-size: 30%;
-    /* width: 20%; */
+  }
+  .cont-nav {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .cards-container {
     margin-top: 6rem;
